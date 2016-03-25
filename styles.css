@@ -1,3 +1,20 @@
-#B1522A
-#CAB467
-#302C26
+body {
+  background-color: #302C26;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: Pacifico;
+  text-align: center;
+  color: #B1522A;
+}
+
+ul {
+  font-family: Open Sans, sans-serif;
+  color: #CAB467;
+  }
