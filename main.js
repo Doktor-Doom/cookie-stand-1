@@ -1,53 +1,63 @@
 // Store Objects
 
 var pioneerPlace = {
-    min: 17;
-    max: 88;
+    min: 17,
+    max: 88,
     avgSale: 5.2
   };
   pioneerPlace.custHourlySim = function() {
-    return Math.random() * (this.max - this.min) + this.min;
+    return Math.floor (Math.random() * (this.max - this.min) + this.min);
   }
 
 var pdxAirport = {
-    min: 6;
-    max: 24;
+    min: 6,
+    max: 24,
     avgSale: 1.2
   };
   pdxAirport.custHourlySim = function() {
-    return Math.random() * (this.max - this.min) + this.min;
+    Math.floor (Math.random() * (this.max - this.min) + this.min);
   }
 var waSquare = {
-    min: 11;
-    max: 38;
+    min: 11,
+    max: 38,
     avgSale: 1.9
   };
   waSquare.custHourlySim = function() {
-    return Math.random() * (this.max - this.min) + this.min;
+    Math.floor (Math.random() * (this.max - this.min) + this.min);
   }
 
 var sellwood = {
-    min: 20;
-    max: 48;
+    min: 20,
+    max: 48,
     avgSale: 3.3
   };
   sellwood.custHourlySim = function() {
-    return Math.random() * (this.max - this.min) + this.min;
+    Math.floor (Math.random() * (this.max - this.min) + this.min);
   }
 
 var pearlDist = {
-    min: 3;
-    max: 24;
+    min: 3,
+    max: 24,
     avgSale: 2.6
   };
   pearlDist.custHourlySim = function() {
-    return Math.random() * (this.max - this.min) + this.min;
+    Math.floor (Math.random() * (this.max - this.min) + this.min);
   }
 
+// Store hours array
+
+var storeHours = ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
+
 //TODO: complete hourly cookie simulator
-function cookiesHourlySim () {
+function cookiesHourlySim (store) {
   var cookieSimArray = [];
+  var cookiesTotal = 0;
   for (index = 0; index < 8; index++) {
-    var cookiePurchase =
-  }
-};
+    var cookiePurchase = Math.floor(store.custHourlySim() * store.avgSale)
+    cookieSimArray.push(cookiePurchase);
+    cookiesTotal =+ 
+    }
+console.log(cookieSimArray);
+}
+
+cookiesHourlySim(pioneerPlace);
