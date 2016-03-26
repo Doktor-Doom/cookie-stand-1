@@ -6,6 +6,8 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 400px;
+  height: auto;
 }
 
 h1 {
@@ -14,43 +16,24 @@ h1 {
   color: #B1522A;
 }
 
+p {
+  font-family: Georgia, serif;
+  color: #CAB467;
+}
+
+#welcome {
+  text-align: center;
+}
+
 ul {
+  margin-left: 20px;
+  float: left;
+  display: inline-block;
+  width: 15%;
   font-family: Open Sans, sans-serif;
   color: #B1522A;
   }
 li {
   font-family: Georgia, serif;
   color: #CAB467;
-}
-
-
-#container1 {
-    float: left;
-    width: 100%;
-    position: relative;
-    right: 50%;
-}
-
-#container2 {
-    clear: left;
-    float: left;
-    width: 100%;
-    overflow: hidden;
-}
-
-
-#col1 {
-    float: left;
-    width: 46%;
-    position: relative;
-    left: 52%;
-    overflow: hidden;
-}
-
-#col2 {
-    float: left;
-    width: 46%;
-    position: relative;
-    left: 56%;
-    overflow: hidden;
 }
