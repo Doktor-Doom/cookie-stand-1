@@ -51,11 +51,12 @@ var pearlDist = {
   }
 
 
-//
+// Store hours array
+
+var storeHours = ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 
  // hourly cookie simulator
 function cookiesHourlySim (store) {
-  var storeHours = ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
   var cookieSimArray = [];
   var cookiesTotal = 0;
   for (var index = 0; index < storeHours.length; index++) {
