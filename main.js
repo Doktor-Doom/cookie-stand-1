@@ -1,5 +1,4 @@
 // Store Objects
-
 var pioneerPlace = {
     location: "pioneerPlace",
     min: 17,
@@ -57,18 +56,19 @@ var storeHours = ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 
  // hourly cookie simulator
 function cookiesHourlySim (store) {
-  var cookieSimArray = [];
-  var cookiesTotal = 0;
+  var cookieSimArray = []; //array holds hourly estimates
+  var cookiesTotal = 0; //sums hourly estimates for daily total
   for (var index = 0; index < storeHours.length; index++) {
-    var cookiePurchase = Math.floor(store.custHourlySim() * store.avgSale)
-    cookiesTotal += cookiePurchase;
-    cookieSimArray.push(cookiePurchase);
-    var listItem = document.getElementById(store.location);
-    listItem.innerHTML += "<li>" + (storeHours[index]) + ": " + cookieSimArray[index] + "</li>";
+    var cookiePurchase = Math.floor(store.custHourlySim() * store.avgSale) //estimates sales for hour
+    cookiesTotal += cookiePurchase; //sums salesr
+    cookieSimArray.push(cookiePurchase); //pushes estimate to array
+    var listItem = document.getElementById(store.location); //finds ist location on page
+    listItem.innerHTML += "<li>" + (storeHours[index]) + ": " + cookieSimArray[index] + "</li>"; //posts to page
   };
-  listItem.innerHTML += "<li>" + ("Total") + ": " + cookiesTotal + "</li>";
+  listItem.innerHTML += "<li>" + ("Total") + ": " + cookiesTotal + "</li>"; //posts daily total to page
 }
 
+// call each store in estimator function
 cookiesHourlySim(pioneerPlace);
 cookiesHourlySim(pdxAirport);
 cookiesHourlySim(waSquare);

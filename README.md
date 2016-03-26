@@ -17,3 +17,5 @@ styles.CSS holds CSS
 ### Daily projections
 Object-oriented model of per store sales using random numbers
 Create object for each store
+Created function that calculates estimate based on store object random number method
+and prints to a list on the page 
