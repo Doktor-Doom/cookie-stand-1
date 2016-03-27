@@ -58,34 +58,34 @@ var pearlDist = {
     return Math.floor (Math.random() * (this.max - this.min) + this.min);
   }
 
-
-// Store and store hour array
+// Store and store hours array
 var storeItemIds = [pioneerPlace, pdxAirport, waSquare,sellwood,
 pearlDist];
 var storeHours = ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 
- // hourly cookie simulator and post to page
+// hourly cookie simulator and post to page
 for (var storeIndex = 0; storeIndex < storeItemIds.length; storeIndex++) {
   cookiesHourlySim(storeItemIds[storeIndex]); //call function for each store
 
     function cookiesHourlySim(store) {
       var cookiesTotal = 0; //sums hourly estimates for daily total
-      var newElement = document.createElement('ul');
-      var ulNameText = document.createTextNode(store.location);
-      newElement.appendChild(ulNameText);
-      var ulPosition = document.getElementsByTagName('div')[0];
-      ulPosition.appendChild(newElement);
+      var newElement = document.createElement('ul'); //create ul for each store
+      var ulNameText = document.createTextNode(store.location); //store name as text node
+      newElement.appendChild(ulNameText); //append name to ul
+      var ulPosition = document.getElementsByTagName('div')[0]; //find location for
+      ulPosition.appendChild(newElement); // post to page
 
       for (var index = 0; index < storeHours.length; index++) {
         var cookiePurchase = Math.floor(store.custHourlySim() * store.avgSale) //estimates sales for hour
-        cookiesTotal += cookiePurchase; //sums salesr
-        var newListItem = document.createElement('li');
-        var listItemText = document.createTextNode(storeHours[index] + ": " + cookiePurchase)
-        newListItem.appendChild(listItemText);
-        var liPosition = document.getElementsByTagName('ul')[storeIndex];
-        liPosition.appendChild(newListItem);
-        store.cookieSimArray.push(cookiePurchase);
+        cookiesTotal += cookiePurchase; //sums total sales
+        var newListItem = document.createElement('li'); //create li for each hour
+        var listItemText = document.createTextNode(storeHours[index] + ": " + cookiePurchase) // create text for hourly li
+        newListItem.appendChild(listItemText); // add text to li
+        var liPosition = document.getElementsByTagName('ul')[storeIndex]; //get location post to page
+        liPosition.appendChild(newListItem); // post element & text to page
+        store.cookieSimArray.push(cookiePurchase); // push estimate to store array
       };
+        //add total sales to bottom of store list
         var newListItem = document.createElement('li');
         var listItemText = document.createTextNode("Total" + ": " + cookiesTotal)
         newListItem.appendChild(listItemText);
