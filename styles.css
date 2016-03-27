@@ -2,20 +2,36 @@ body {
   background-color: #302C26;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 400px;
-  height: auto;
+header {
+  margin-bottom: 10px;
+
 }
 
-h1 {
-  font-family: Pacifico;
-  text-align: center;
+header img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 400px;
+  height: auto;
+  margin: 10px;
+}
+
+header h1 {
+  font-family: Pacifico, serif;
+  display: inline-block;
   color: #B1522A;
   font-size: 250%;
-  }
+  vertical-align: -20px;
+  margin-left: 60px;
+    }
+
+header h2, p {
+    text-align: center;
+}
+
+h2, h3, h4 {
+font-family: Open Sans, sans-serif;
+color: #B1522A;
+}
 
 p {
   font-family: Georgia, serif;
