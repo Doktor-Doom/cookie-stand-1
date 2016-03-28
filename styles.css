@@ -42,15 +42,21 @@ p {
   text-align: center;
 }
 
+table {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 tbody {
-  font-weight: bold;
   background-color: #B1522A;
-  opacity: 0.5;
   }
 
 th {
+  width: 100px;
+  height: 40px;
   font-family: Open Sans, sans-serif;
-  color: #302C26;
+  color: #CAB467;
   text-align: center;
   font-weight: bold;
 }
@@ -58,7 +64,7 @@ th {
 
 td {
   font-family: Georgia, serif;
-  color: #CAB467;
+  color: #302C26;
   list-style-type: none;
   text-align: center;
   width: 75px;
