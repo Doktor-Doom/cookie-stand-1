@@ -1,11 +1,10 @@
 body {
   background-color: #302C26;
-}
+  }
 
 header {
   margin-bottom: 10px;
-
-}
+  }
 
 header img {
   vertical-align: middle;
@@ -13,7 +12,7 @@ header img {
   width: 400px;
   height: auto;
   margin: 10px;
-}
+  }
 
 header h1 {
   font-family: Pacifico, serif;
@@ -22,31 +21,28 @@ header h1 {
   font-size: 250%;
   vertical-align: -25px;
   margin-left: 65px;
-    }
+  text-shadow: 2px 4px 1px #CAB467;
+  }
 
-header h2, p {
+section header h2, p {
     text-align: center;
-}
+  }
 
 h2, h3, h4 {
 font-family: Open Sans, sans-serif;
 color: #B1522A;
-}
+  }
 
 p {
   font-family: Georgia, serif;
   color: #CAB467;
-}
-
-#welcome {
-  text-align: center;
-}
+  }
 
 table {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
-}
+  }
 
 tbody {
   background-color: #B1522A;
@@ -59,7 +55,7 @@ th {
   color: #CAB467;
   text-align: center;
   font-weight: bold;
-}
+  }
 
 
 td {
@@ -67,5 +63,4 @@ td {
   color: #302C26;
   list-style-type: none;
   text-align: center;
-  width: 75px;
-}
+  }
