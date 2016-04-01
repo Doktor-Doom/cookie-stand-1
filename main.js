@@ -6,75 +6,23 @@ var CookieStore = function(location, min, max, avgSale) {
   this.avgSale = avgSale;
   this.cookieSimArray = [];
   this.custHourlySim = function() {
-    return Math.floor(Math.random() * (this.max - this.min) + this.min);
+    return Math.floor(((Math.random() * (this.max - this.min)) + this.min) * this.avgSale);
   };
 }
 
 var pioneerPlace = new CookieStore("Pioneer Place", 17, 88, 5.2);
 var pdxAirport = new CookieStore("Portland Airport", 6, 24, 1.2);
 var waSquare = new CookieStore("Washington Square", 11, 38, 1.9);
-var pioneerPlace = new CookieStore("Pioneer Place", 17, 88, 5.2);
-var pioneerPlace = new CookieStore("Pioneer Place", 17, 88, 5.2);
- 
-// var pioneerPlace = {
-//     location: "Pioneer Place",
-//     itemId: "pioneerPlace",
-//     min: 17,
-//     max: 88,
-//     avgSale: 5.2,
-//     cookieSimArray: [],
-//   }
+var sellwood = new CookieStore("Sellwood", 20, 48, 3.3);
+var pearlDist = new CookieStore("Pearl District", 3, 24, 2.6);
 
-// var pdxAirport = {
-//     location: "Portland Airport",
-//     itemId: "pdxAirport",
-//     min: 6,
-//     max: 24,
-//     avgSale: 1.2,
-//     cookieSimArray: [],
-//   };
-//   pdxAirport.custHourlySim = function() {
-//      return Math.floor(Math.random() * (this.max - this.min) + this.min);
-//   }
+var storesArray = new Array();
+storesArray.push(new CookieStore("Pioneer Place", 17, 88, 5.2));
+storesArray.push(new CookieStore("Portland Airport", 6, 24, 1.2));
+storesArray.push(new CookieStore("Washington Square", 11, 38, 1.9));
+storesArray.push(new CookieStore("Sellwood", 20, 48, 3.3));
+storesArray.push(new CookieStore("Pearl District", 3, 24, 2.6));
 
-var waSquare = {
-    location: "Washington Square",
-    itemId: "waSquare",
-    min: 11,
-    max: 38,
-    avgSale: 1.9,
-    cookieSimArray: [],
-  };
-  waSquare.custHourlySim = function() {
-    return Math.floor (Math.random() * (this.max - this.min) + this.min);
-  }
-
-var sellwood = {
-    location: "Sellwood",
-    itemId: "sellwood",
-    min: 20,
-    max: 48,
-    avgSale: 3.3,
-    cookieSimArray: [],
-  };
-  sellwood.custHourlySim = function() {
-    return Math.floor (Math.random() * (this.max - this.min) + this.min);
-  }
-
-var pearlDist = {
-    location: "Pearl District",
-    itemI: "pearlDist",
-    min: 3,
-    max: 24,
-    avgSale: 2.6,
-    cookieSimArray: [],
-  };
-  pearlDist.custHourlySim = function() {
-    return Math.floor (Math.random() * (this.max - this.min) + this.min);
-  }
-
-// Store and store hours array
-var storeItemIds = [pioneerPlace, pdxAirport, waSquare, sellwood, pearlDist];
 var storeHours = ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 // Create table header for store hours
 function tableHeader() {
@@ -95,8 +43,8 @@ function tableHeader() {
 
   tableHeader()
 // Create store rows, get store names as row headers, populate with sales simulations
-  for (var storeIndex = 0; storeIndex < storeItemIds.length; storeIndex++) {
-    cookiesHourlySim(storeItemIds[storeIndex]); // call function for each store
+  for (var storeIndex = 0; storeIndex < storesArray.length; storeIndex++) {
+    cookiesHourlySim(storesArray[storeIndex]); // call function for each store
 
     function cookiesHourlySim(store) {
       var cookiesTotal = 0; // sums hourly estimates for daily total
@@ -112,7 +60,7 @@ function tableHeader() {
       thStorePosition.appendChild(thStoreName);
 
       for (var tableIndex = 0; tableIndex < storeHours.length; tableIndex++) {
-        var cookiePurchase = Math.floor(store.custHourlySim() * store.avgSale) // estimates sales for hour
+        var cookiePurchase = store.custHourlySim();// estimates sales for hour
         cookiesTotal += cookiePurchase; // sums total sales
         var newTableItem = document.createElement('td'); // create td for each hour
         var tableItemText = document.createTextNode(cookiePurchase) // create text for hourly li
