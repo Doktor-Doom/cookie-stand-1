@@ -1,27 +1,41 @@
 // Store Objects
-var pioneerPlace = {
-    location: "Pioneer Place",
-    itemId: "pioneerPlace",
-    min: 17,
-    max: 88,
-    avgSale: 5.2,
-    cookieSimArray: [],
-  };
-  pioneerPlace.custHourlySim = function() {
+var CookieStore = function(location, min, max, avgSale) {
+  this.location = location;
+  this.min =  min;
+  this.max = max;
+  this.avgSale = avgSale;
+  this.cookieSimArray = [];
+  this.custHourlySim = function() {
     return Math.floor(Math.random() * (this.max - this.min) + this.min);
-  }
-
-var pdxAirport = {
-    location: "Portland Airport",
-    itemId: "pdxAirport",
-    min: 6,
-    max: 24,
-    avgSale: 1.2,
-    cookieSimArray: [],
   };
-  pdxAirport.custHourlySim = function() {
-     return Math.floor(Math.random() * (this.max - this.min) + this.min);
-  }
+}
+
+var pioneerPlace = new CookieStore("Pioneer Place", 17, 88, 5.2);
+var pdxAirport = new CookieStore("Portland Airport", 6, 24, 1.2);
+var waSquare = new CookieStore("Washington Square", 11, 38, 1.9);
+var pioneerPlace = new CookieStore("Pioneer Place", 17, 88, 5.2);
+var pioneerPlace = new CookieStore("Pioneer Place", 17, 88, 5.2);
+ 
+// var pioneerPlace = {
+//     location: "Pioneer Place",
+//     itemId: "pioneerPlace",
+//     min: 17,
+//     max: 88,
+//     avgSale: 5.2,
+//     cookieSimArray: [],
+//   }
+
+// var pdxAirport = {
+//     location: "Portland Airport",
+//     itemId: "pdxAirport",
+//     min: 6,
+//     max: 24,
+//     avgSale: 1.2,
+//     cookieSimArray: [],
+//   };
+//   pdxAirport.custHourlySim = function() {
+//      return Math.floor(Math.random() * (this.max - this.min) + this.min);
+//   }
 
 var waSquare = {
     location: "Washington Square",
