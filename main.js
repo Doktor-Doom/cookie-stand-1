@@ -25,23 +25,33 @@ storesArray.push(new CookieStore("Pearl District", 3, 24, 2.6));
 
 var storeHours = ["10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm"];
 // Create table header for store hours
+function domAppend(element, text, parent) {
+  console.log(element, text, parent);
+  var elementName = document.createElement(element);
+  var textNode = document.createTextNode(text);
+  elementName.appendChild(textNode);
+  var elementPosition = document.getElementsByTagName(parent)[0];
+  elementPosition.appendChild(elementName);
+  }
+
 function tableHeader() {
   for (var tableIndex = 0; tableIndex < storeHours.length; tableIndex++) {
-    var newTableHours = document.createElement('th');
-    var listHoursText = document.createTextNode(storeHours[tableIndex]);
-    newTableHours.appendChild(listHoursText);
-    var thPosition = document.getElementsByTagName('tr')[0];
-    thPosition.appendChild(newTableHours);
+      var headerText = storeHours[tableIndex];
+      console.log(headerText);
+      domAppend("th", headerText, "tr");
     };
+
+    domAppend("th", "Total", "tr");
     // Add total header
-    var tableTotal = document.createElement('th');
-    var tableTotalText = document.createTextNode('Total');
-    tableTotal.appendChild(tableTotalText);
-    var totalPosition = document.getElementsByTagName('tr')[0];
-    totalPosition.appendChild(tableTotal);
-    }
+    // var tableTotal = document.createElement('th');
+    // var tableTotalText = document.createTextNode('Total');
+    // tableTotal.appendChild(tableTotalText);
+    // var totalPosition = document.getElementsByTagName('tr')[0];
+    // totalPosition.appendChild(tableTotal);
+  }
 
   tableHeader()
+
 // Create store rows, get store names as row headers, populate with sales simulations
   for (var storeIndex = 0; storeIndex < storesArray.length; storeIndex++) {
     cookiesHourlySim(storesArray[storeIndex]); // call function for each store
