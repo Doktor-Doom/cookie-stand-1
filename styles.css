@@ -4,14 +4,15 @@ body {
 
 header {
   margin-bottom: 10px;
+  text-align: center;
   }
 
 header img {
   vertical-align: middle;
-  display: inline-block;
-  width: 400px;
+  width: 300px;
   height: auto;
-  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
   }
 
 header h1 {
@@ -19,8 +20,7 @@ header h1 {
   display: inline-block;
   color: #B1522A;
   font-size: 250%;
-  vertical-align: -25px;
-  margin-left: 65px;
+  vertical-align: -20px;
   text-shadow: 2px 4px 1px #CAB467;
   }
 
@@ -44,7 +44,7 @@ table {
   margin-right: auto;
   }
 
-tbody {
+thead, tbody {
   background-color: #B1522A;
   }
 
