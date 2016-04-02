@@ -10,11 +10,11 @@ var CookieStore = function(location, min, max, avgSale) {
   };
 }
 
-var pioneerPlace = new CookieStore("Pioneer Place", 17, 88, 5.2);
-var pdxAirport = new CookieStore("Portland Airport", 6, 24, 1.2);
-var waSquare = new CookieStore("Washington Square", 11, 38, 1.9);
-var sellwood = new CookieStore("Sellwood", 20, 48, 3.3);
-var pearlDist = new CookieStore("Pearl District", 3, 24, 2.6);
+// var pioneerPlace = new CookieStore("Pioneer Place", 17, 88, 5.2);
+// var pdxAirport = new CookieStore("Portland Airport", 6, 24, 1.2);
+// var waSquare = new CookieStore("Washington Square", 11, 38, 1.9);
+// var sellwood = new CookieStore("Sellwood", 20, 48, 3.3);
+// var pearlDist = new CookieStore("Pearl District", 3, 24, 2.6);
 
 var storesArray = new Array();
 storesArray.push(new CookieStore("Pioneer Place", 17, 88, 5.2));
@@ -65,3 +65,17 @@ function tableHeader() {
       domAppend("th", cookiesTotal, "tr", storeIndex + 1);
     }
   };
+
+//create store list for menu
+function domAppendClass(element, text, className, index) {
+  console.log(element, text, className);
+  var elementName = document.createElement(element);
+  elementName.innerHTML = text
+  var elementPosition = document.getElementsByClassName(className)[index];
+  elementPosition.appendChild(elementName);
+  };
+
+for (var storeIndex = 0; storeIndex < storesArray.length; storeIndex++) {
+  var storeLink = "<a href ='#'>"+ storesArray[storeIndex].location+"</a>";
+  domAppendClass("li", storeLink, "submenu", 0); // call function for each store
+};
