@@ -2,9 +2,10 @@ body {
   background-color: #302C26;
   }
 
-header {
+body > header {
   text-align: center;
   margin-bottom: 10px;
+  position: relative;
   }
 
 header img {
@@ -21,6 +22,90 @@ header h1 {
   font-size: 250%;
   text-shadow: 2px 4px 1px #CAB467;
   }
+
+section header h2, p {
+    text-align: center;
+  }
+
+h2, h3, h4 {
+font-family: Open Sans, sans-serif;
+color: #B1522A;
+  }
+
+p {
+  font-family: Georgia, serif;
+  color: #CAB467;
+  }
+
+table {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+thead, tbody {
+  background-color: #B1522A;
+  }
+
+th {
+  width: 100px;
+  height: 40px;
+  font-family: Open Sans, sans-serif;
+  color: #CAB467;
+  text-align: center;
+  font-weight: bold;
+  }
+
+
+td {
+  font-family: Georgia, serif;
+  color: #302C26;
+  list-style-type: none;
+  text-align: center;
+  }
+
+legend {
+  font-family: Open Sans, sans-serif;
+  color: #CAB467;
+}
+
+label {
+  font-family: Georgia, serif;
+  color: #B1522A;
+  margin-left: 2%;
+}
+
+fieldset {
+  border:1px solid #CAB467;
+  }
+
+input[type="text"], input[type="number"] {
+  background-color: #CAB467;
+  font-family: Georgia, serif;
+  color: #302C26;
+  }
+
+input[type="number"] {
+  width: 50px;
+}
+
+input[type="button"] {
+  background-color: #B1522A;
+  border: none;
+  font-family: Open Sans, sans-serif;
+  font-size: .8em;
+  color: #CAB467;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  display: inline-block;
+  float: right;
+}
+
+input.required {
+  background-color: #B1522A;
+  color: #CAB467;
+}
 
 footer nav {
   width: 300px;
@@ -72,45 +157,4 @@ footer nav li li {
 
 footer nav li:hover ul {
   display: block;
-  }
-
-section header h2, p {
-    text-align: center;
-  }
-
-h2, h3, h4 {
-font-family: Open Sans, sans-serif;
-color: #B1522A;
-  }
-
-p {
-  font-family: Georgia, serif;
-  color: #CAB467;
-  }
-
-table {
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  }
-
-thead, tbody {
-  background-color: #B1522A;
-  }
-
-th {
-  width: 100px;
-  height: 40px;
-  font-family: Open Sans, sans-serif;
-  color: #CAB467;
-  text-align: center;
-  font-weight: bold;
-  }
-
-
-td {
-  font-family: Georgia, serif;
-  color: #302C26;
-  list-style-type: none;
-  text-align: center;
   }
