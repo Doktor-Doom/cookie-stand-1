@@ -22,13 +22,14 @@ header h1 {
   text-shadow: 2px 4px 1px #CAB467;
   }
 
-header nav {
-  width: 400px;
-  float: right;
+footer nav {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0, 0, 0, 20px;
-}
+  }
 
-header nav ul {
+footer nav ul {
   list-style: none;
   background-color: #B1522A;
   text-align: center;
@@ -36,46 +37,40 @@ header nav ul {
   margin: 0;
   }
 
-header nav li {
+footer nav li {
   font-family: Open Sans, sans-serif;
   font-size: 1.2em;
   line-height: 40px;
-  text-align: left;
   display: inline-block;
   }
 
-header nav a {
+footer nav a {
   text-decoration: none;
   color: #CAB467;
   display: block;
   padding-left: 15px;
   }
 
-header nav a:hover {
+footer nav a:hover {
   background-color: #302C26;
   }
 
-header nav a.active {
+footer nav a.active {
   background-color: #CAB467;
   color: #B1522A;
   }
 
-header nav li ul {
+footer nav li ul {
   position: absolute;
   display: none;
   width: inherit;
   }
 
-header nav li li {
+footer nav li li {
   font-size: .8em;
-  border-bottom: 1px solid #302C26;
   }
 
-header nav li:hover ul {
-  display: block;
-  }
-
-header nav li ul li {
+footer nav li:hover ul {
   display: block;
   }
 

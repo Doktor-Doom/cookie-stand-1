@@ -10,12 +10,6 @@ var CookieStore = function(location, min, max, avgSale) {
   };
 }
 
-// var pioneerPlace = new CookieStore("Pioneer Place", 17, 88, 5.2);
-// var pdxAirport = new CookieStore("Portland Airport", 6, 24, 1.2);
-// var waSquare = new CookieStore("Washington Square", 11, 38, 1.9);
-// var sellwood = new CookieStore("Sellwood", 20, 48, 3.3);
-// var pearlDist = new CookieStore("Pearl District", 3, 24, 2.6);
-
 var storesArray = new Array();
 storesArray.push(new CookieStore("Pioneer Place", 17, 88, 5.2));
 storesArray.push(new CookieStore("Portland Airport", 6, 24, 1.2));
