@@ -100,7 +100,7 @@ function evaluateForm(newStoreData) {
         storeIndex = storesArray.length
     };
 
-    var resetClass = document.querySelectorAll('input.required');
+    var resetClass = document.querySelectorAll('required');
 
     if (resetClass.length > 0) {
         for (var i = 0; i < resetClass; i++) {
