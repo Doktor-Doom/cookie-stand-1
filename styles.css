@@ -107,54 +107,44 @@ input.required {
   color: #CAB467;
 }
 
-footer nav {
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0, 0, 0, 20px;
-  }
-
-footer nav ul {
-  list-style: none;
-  background-color: #B1522A;
-  text-align: center;
-  padding: 0;
+header nav ul {
+  positon: relative;
+  list-style-type: none;
   margin: 0;
-  }
+  padding: 0;
+  overflow: hidden;
+  background-color: #B1522A;
+}
 
-footer nav li {
-  font-family: Open Sans, sans-serif;
-  font-size: 1.2em;
-  line-height: 40px;
-  display: inline-block;
-  }
+header nav ul li {
+  float: right;
+  border-right: 1px solid #CAB467;
+  border-left: 1px solid #CAB467;
 
-footer nav a {
-  text-decoration: none;
+}
+
+li a {
+  display: block;
   color: #CAB467;
-  display: block;
-  padding-left: 15px;
-  }
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-footer nav a:hover {
+li a:hover:not(.active) {
   background-color: #302C26;
-  }
+}
 
-footer nav a.active {
-  background-color: #CAB467;
-  color: #B1522A;
-  }
-
-footer nav li ul {
-  position: absolute;
-  display: none;
-  width: inherit;
-  }
-
-footer nav li li {
-  font-size: .8em;
-    }
-
-footer nav li:hover ul {
+#main > li:hover .submenu {
   display: block;
-  }
+}
+
+.active {
+    background-color: #CAB467;
+    color: #B1522A;
+}
+
+.submenu {
+  display: none;
+  position:absolute;
+}

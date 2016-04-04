@@ -11,9 +11,19 @@
 
 <body>
     <header>
-        <img src="images/salmon.png" />
-        <br>
-        <h1>Pat's Salmon Cookies</h1>
+      <nav>
+          <ul id="main">
+              <li><a class="active" href="#">Home</a></li>
+              <li><a href="#">Stores</a>
+                  <ul class="submenu">
+                  </ul>
+              </li>
+              <li><a href="#">About Us</a></li>
+          </ul>
+      </nav>
+      <img src="images/salmon.png" />
+      <br>
+      <h1>Pat's Salmon Cookies</h1>
     </header>
     <section>
         <header>
@@ -29,43 +39,31 @@
             <tbody>
             </tbody>
         </table>
-    <br>
-    <br>
-    <header>
-        <h2>
-        To add a new store please complete the following form. <strong>All fields are required.</strong>
-      </h2>
-    </header>
-    <form method="post" id="myForm">
-        <fieldset>
-            <legend>
-                Add A New Store
-            </legend>
-            <label for="location">Store location: </label>
-            <input type="text" name="location" required="required" />
-            <label for="location">Minimum customers: </label>
-            <input type="number" name="min" required="required" maxlength = "4" />
-            <label for="location">Maximum customers: </label>
-            <input type="number" name="max" required="required" maxlength = "4" />
-            <label for="location">Average cookie sales: </label>
-            <input type="number" name="avgSale" required="required" maxlength = "4" />
-            <input type="button" value="Submit New Store Data" onclick="evaluateForm(this.form)" />
-        </fieldset>
-    </form>
-    <br />
-    <br />
+        <br>
+        <br>
+        <header>
+            <h2>To add a new store please complete the following form. <strong>All fields are required.</strong></h2>
+        </header>
+        <form method="post" id="myForm">
+            <fieldset>
+                <legend>
+                    Add A New Store
+                </legend>
+                <label for="location">Store location: </label>
+                <input type="text" name="location" required="required" />
+                <label for="location">Minimum customers: </label>
+                <input type="number" name="min" required="required" maxlength="4" />
+                <label for="location">Maximum customers: </label>
+                <input type="number" name="max" required="required" maxlength="4" />
+                <label for="location">Average cookie sales: </label>
+                <input type="number" name="avgSale" required="required" maxlength="4" />
+                <input type="button" value="Submit New Store Data" onclick="evaluateForm(this.form)" />
+            </fieldset>
+        </form>
+        <br />
+        <br />
     </section>
     <footer>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Stores</a>
-                    <ul class="submenu">
-                    </ul>
-                </li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </nav>
         <br />
         <br />
     </footer>

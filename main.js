@@ -98,14 +98,13 @@ function evaluateForm(newStoreData) {
         domAppendClass("li", storeLink, "submenu", 0);
         document.getElementById("myForm").reset();
         storeIndex = storesArray.length
-    };
-
-    var resetClass = document.querySelectorAll('required');
-
-    if (resetClass.length > 0) {
-        for (var i = 0; i < resetClass; i++) {
-            resetClass[i].className = "";
+        var resetClass = document.querySelectorAll('input.required');
+        console.log(resetClass);
+        if (resetClass.length > 0) {
+            for (var i = 0; i < resetClass.length; i++) {
+                console.log(i, resetClass[i]);
+                resetClass[i].classList.remove("required");
+            }
         }
-    }
-
+    };
 };
