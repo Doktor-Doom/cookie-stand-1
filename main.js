@@ -98,6 +98,7 @@ function evaluateForm(newStoreData) {
         domAppendClass("li", storeLink, "submenu", 0);
         document.getElementById("myForm").reset();
         storeIndex = storesArray.length
+        window.scrollTo(0, 0);
         var resetClass = document.querySelectorAll('input.required');
         console.log(resetClass);
         if (resetClass.length > 0) {
